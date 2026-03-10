@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_10_124634) do
+ActiveRecord::Schema[8.1].define(version: 2026_03_10_153809) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -24,5 +24,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_124634) do
     t.string "title"
     t.datetime "updated_at", null: false
     t.boolean "visa_friendly"
+    t.index ["source_url"], name: "index_jobs_on_source_url", unique: true
   end
 end
